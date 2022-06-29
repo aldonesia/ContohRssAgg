@@ -40,4 +40,15 @@ class NewsController extends Controller
             print_r("<br><br><br><br>");    
         }
     }
+
+    public function getNews($rss_id){
+        // get from news
+        $news= News::where('rss_id', $rss_id)->get();
+        return response()->json($news, 200);
+    }
+
+    public function show($pokemon_name){
+        $data['pokemon_name']= $pokemon_name;
+        return view('dashboard', $data);
+    }
 }

@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/aggregrate/{rss_id}', [NewsController::class, 'aggregrate']);
+Route::get('/show/{pokemon_name}', [NewsController::class, 'show']);
